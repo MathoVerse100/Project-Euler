@@ -1,12 +1,11 @@
 import math
 
-t = int(input("Find the sum of the even-valued terms of the fibonacci sequence not exceeding: "))
 k=0
 num = []
 
 while 1==1:
     k = k+1
-    if int((1/math.sqrt(5))*(pow(((1+math.sqrt(5))/2),k)-pow(((1-math.sqrt(5))/2),k))) > t:
+    if int((1/math.sqrt(5))*(pow(((1+math.sqrt(5))/2),k)-pow(((1-math.sqrt(5))/2),k))) > 4000000:
         break
 
 for i in range(0,k):
