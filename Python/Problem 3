@@ -1,7 +1,5 @@
 -----## This is extremely slow for large numbers such as n = 600851475143 (the number in question). I'll find a more efficient way later.
 
-import math
-
 n = int(input())
 num = []
 
