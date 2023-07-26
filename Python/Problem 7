@@ -1,0 +1,17 @@
+-----## substitue n = 10001 and you get the result (104743). Rather inefficient for large numbers; will fix later.
+
+n = int(input())
+i = 2
+num = [2]
+
+if n > 1:
+    while len(num) != n:
+        i = i + 1
+        if i%2 == 1:
+            for j in range(2, i):
+                if i % j == 0:
+                    break
+            else:
+                num.append(i)
+
+print(max(num))
