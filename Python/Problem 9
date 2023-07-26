@@ -1,6 +1,6 @@
 import math
-num = []
 a=0
+
 while True:
    a = a+1
    b = 1000*((a-500)/(a-1000))
