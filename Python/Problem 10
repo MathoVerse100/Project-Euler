@@ -1,0 +1,15 @@
+-----## Too slow for exceedingly large numbers. Will fix later.
+
+x = int(input())
+n = 2
+num = [2]
+
+while n < x:55
+    n = n + 1
+    for j in range(2, n):
+        if n % j == 0:
+            break
+    else:
+        num.append(n)
+
+print(sum(num))
