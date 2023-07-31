@@ -1,0 +1,9 @@
+num = []
+
+for i in range(100,1000):
+    for j in range(100,1000):
+        z = i*j
+        if z == int(str(z)[::-1]):
+            num.append(z)
+
+print(max(num))
