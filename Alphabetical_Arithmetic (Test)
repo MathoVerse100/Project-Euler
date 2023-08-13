@@ -1,0 +1,36 @@
+letters_to_numbers = {"a": 0, "b": 1, "c": 2, "d": 3,
+                      "e": 4, "f": 5, "g": 6,
+                      "h": 7, "i": 8, "j": 9}
+
+def main():
+    try:
+        operation = input("Operation: ")
+
+        operation_list = operation.split()
+        number_1 = []
+        number_2 = []
+
+        for j in operation_list[0]:
+            number_1.append(str(letters_to_numbers[j]))
+        for i in operation_list[2]:
+            number_2.append(str(letters_to_numbers[i]))
+
+        if operation_list[1] == "+":
+            result = int("".join(number_1)) + int("".join(number_2))
+        elif operation_list[1] == "-":
+            result = int("".join(number_1)) - int("".join(number_2))
+        elif operation_list[1] == "*":
+            result = int("".join(number_1)) * int("".join(number_2))
+        elif operation_list[1] == "/":
+            result = int(int("".join(number_1)) / int("".join(number_2)))
+
+        for letter in range(len(str(result))):
+            for key, value in letters_to_numbers.items():
+                if value == int(str(result)[letter]):
+                    print(key, end="")
+    except (ValueError, IndexError, KeyError):
+        print("Invalid Entry")
+    except (KeyboardInterrupt, EOFError):
+        exit()
+
+main()
