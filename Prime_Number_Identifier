@@ -1,0 +1,19 @@
+def isPrime(number):
+    try:
+        if number == 2:
+            print("Prime")
+        elif number < 2:
+            print("Not Prime")
+        else:
+            for i in range(2, int(math.sqrt(number) + 1)):
+                if number % i == 0:
+                    print("Not prime")
+                    break
+            else:
+                print("Prime")
+    except ValueError:
+        print("Not an integer")
+
+number = int(input("Number: "))
+
+isPrime(number)
