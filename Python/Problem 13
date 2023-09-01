@@ -2,7 +2,7 @@
 
 import csv
 
-# In a csv file, copy-paste the number block without any formatting into a file named data.csv
+#  In a csv file, copy-paste the number block without any formatting into a file named data.csv
 with open("data.csv", "r") as csv_file:
     number_reader = csv.reader(csv_file)
 
