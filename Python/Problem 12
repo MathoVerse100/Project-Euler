@@ -1,0 +1,11 @@
+from sympy import divisor_count
+
+n = 1
+y = 0
+
+while y <= 500:
+    x = n * (n + 1) // 2
+    y = divisor_count(x)
+    n += 1
+
+print(x)
