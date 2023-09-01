@@ -107,3 +107,12 @@ number_list = [int(x) for x in number]
 print(sum(number_list))
 
 -----## Method 2:
+
+import csv
+
+# In a csv file, copy-paste the number block without any formatting into a file named data.csv
+with open("data.csv", "r") as csv_file:
+    number_reader = csv.reader(csv_file)
+
+    numbers = [int(line[0]) for line in number_reader]
+    print(str(sum(numbers))[0:10])
