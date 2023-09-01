@@ -1,0 +1,18 @@
+def collatz_length(n):
+    sequence = [n]
+    while n != 1:
+        if n % 2 == 1:
+            n = 3 * n + 1
+        else:
+            n = n / 2
+        sequence.append(n)
+
+    return len(sequence)
+
+n = int(input("Number: "))
+maximum_collatz_length = []
+
+for i in range(1, n + 1):
+    maximum_collatz_length.append(collatz_length(i))
+
+print(maximum_collatz_length.index(max(maximum_collatz_length)) + 1)
