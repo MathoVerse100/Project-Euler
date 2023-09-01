@@ -1,15 +1,6 @@
------## Too slow for exceedingly large numbers. Will fix later.
+from sympy import primerange
 
-x = int(input())
-n = 2
-num = [2]
 
-while n < x:55
-    n = n + 1
-    for j in range(2, n):
-        if n % j == 0:
-            break
-    else:
-        num.append(n)
+n = int(input("Number: "))
 
-print(sum(num))
+print(sum(list(primerange(2, n))))
