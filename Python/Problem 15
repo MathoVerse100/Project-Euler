@@ -1,0 +1,6 @@
+import math
+
+
+lattice_dimension = int(input("Lattice dimension: "))
+
+print(math.factorial(2 * lattice_dimension) // pow((math.factorial(lattice_dimension)), 2))
